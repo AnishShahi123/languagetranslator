@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const apiKey =
-  process.env.GEMINI_API_KEY || "AIzaSyBymXAPs4U00Z9yFvTp072eb7y8iSwerZw";
-const genAI = new GoogleGenerativeAI(apiKey);
+const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
+const genAI = new GoogleGenerativeAI(apiKey as string);
 
 const FINAL_AI_PROMPT =
   "You will be provided with a sentence. The sentence is : {sourceText}.\n              Your tasks are to:\n              - Detect what language the sentence is in\n              - Translate the sentence into {selectedLanguage}}\n Do not return anything other than the translated sentence.";
