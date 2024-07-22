@@ -31,6 +31,7 @@ export default function Home() {
     "French",
     "German",
     "Chinese",
+    "Nepali",
   ]);
   const [selectedLanguage, setSelectedLanguage] = useState<string>("Spanish");
 
